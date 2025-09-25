@@ -3,7 +3,7 @@
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    
+
     &__header-wrapper {
         max-width: 1200px;
         margin: 0 auto;
@@ -12,28 +12,173 @@
         justify-content: space-between;
         align-items: center;
     }
+
     &_header-logo {
         font-size: 28px;
         font-weight: bold;
         text-decoration: none;
         color: white;
     }
+
     &__menu-list {
         display: flex;
         list-style: none;
         gap: 30px;
     }
-        &_menu-item-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-        & :hover {
-            opacity: 0.8;
-        }
-        &-current-page {
-            border-bottom: 2px solid white;
-            padding-bottom: 2px;
+
+    &_menu-item-link {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &-current-page {
+        border-bottom: 2px solid white;
+        padding-bottom: 2px;
+    }
 }
+
+.main-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><text x="600" y="300" text-anchor="middle" fill="%23666" font-size="24">Hero Background</text></svg>');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    &__banner-text {
+        max-width: 600px;
+        padding: 0 20px;
+    }
+
+    &__main-title {
+        font-size: 48px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    &__action-btn {
+        background: #ff6b6b;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+    }
+
+}
+
+.catalog-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+
+    &__page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &_section_heading {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: #333;
+    }
+
+    &__item-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        &__promo-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold
+        }
+
+        &__item-photo {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card-details {
+            padding: 20px;
+
+            &_item-title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            &_item-text {
+                color: #666;
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+            .cost{
+                   font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 15px;
+                &_sale-price{
+                    
+                }
+            }
+        }
+
+    }
+
+
 }
