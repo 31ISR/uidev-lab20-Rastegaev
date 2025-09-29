@@ -13,7 +13,7 @@
         align-items: center;
     }
 
-    &_header-logo {
+    &__header-logo {
         font-size: 28px;
         font-weight: bold;
         text-decoration: none;
@@ -26,7 +26,7 @@
         gap: 30px;
     }
 
-    &_menu-item-link {
+    &__menu-item-link {
         color: white;
         text-decoration: none;
         font-weight: 500;
@@ -124,9 +124,9 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        &__special-item {
+            border: 3px solid #ffd700;
+            position: relative;
         }
 
         &__promo-label {
@@ -138,47 +138,155 @@
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 12px;
-            font-weight: bold
+            font-weight: bold;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    &__promo-label {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ffd700;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold
+    }
+
+    &__item-photo {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .card-details {
+        padding: 20px;
+
+        &__item-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
         }
 
-        &__item-photo {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
+        &__item-text {
             color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
         }
 
-        .card-details {
-            padding: 20px;
+        .cost {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
 
-            &_item-title {
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 10px;
-                color: #333;
+            &__sale-price {
+                color: #ff6b6b;
             }
 
-            &_item-text {
-                color: #666;
-                margin-bottom: 15px;
-                font-size: 14px;
+            &__crossed-price {
+                text-decoration: line-through;
+                color: #999;
+                font-size: 18px;
+                margin-left: 10px;
             }
-            .cost{
-                   font-size: 24px;
-    font-weight: bold;
-    color: #667eea;
-    margin-bottom: 15px;
-                &_sale-price{
-                    
-                }
+        }
+
+        &__purchase-btn {
+            width: 100%;
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #5a6fd8;
             }
         }
 
     }
 
+}
 
+.page-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+
+    &__footer-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+    }
+
+    .bottom-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+
+        &_footer-nav-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__legal-text {
+        font-size: 14px;
+        opacity: 0.7;
+    }
+}
+
+@media(max-wdth:768px) {
+    .header-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 }
