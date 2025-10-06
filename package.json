@@ -1,0 +1,19 @@
+{
+  "name": "uidev-lab20-rastegaev",
+  "version": "1.0.0",
+  "description": "## Срок сдачи работ",
+  "main": "script.js",
+  "scripts": {
+    "scss": "sass --watch scss:css",
+    "serve": "live-server ./",
+    "dev": "concurrently \"npm run scss\" \"npm run serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.93.0"
+  }
+}
